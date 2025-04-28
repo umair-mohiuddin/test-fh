@@ -24,11 +24,11 @@
 .navbar-nav{
     width: 100%;
     justify-content: end;
-    gap: 30px;
+    gap: 20px;
 }
 .nav-link{
     font-family: var(--text-font);
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
     width: fit-content !important;
     position: relative;
@@ -109,7 +109,7 @@
 #service .row{
     border-radius: 20px;
     color: var(--main-color);
-    background-color: var(--bg-primary);
+    background-color: var(--bg-black);
     overflow: hidden;
 }
 
@@ -130,7 +130,7 @@
 }
 #service .row .col button:hover{
     color: var(--main-color);
-    background-color: var(--bg-primary);
+    background-color: var(--bg-black);
 }
 #profile{
     background-color: var(--bg-black );
@@ -139,7 +139,7 @@
 }
 #profile img{
     aspect-ratio: 1/1;
-    width: 70%;
+    width: 80%;
     padding: 10px;
     background-color: var(--bg-white);
     border: 2px solid var(--bg-white);
@@ -161,31 +161,69 @@
     font-size: clamp(30px,4vw, 108px);
     font-family: var(--heading-font);
     margin-top: 20px;
+    text-align: center !important;
 }
-#profile h3{
-    font-size: clamp(22px,2.5vw, 72px);
-    font-family: var(--heading-font);
-}
-#profile h4{
-    font-size: clamp(22px,2.5vw, 72px);
-    font-family: var(--heading-font);
-}
+
 #profile p{
     font-size: clamp(18px, 1.8vw, 60px);
     font-family: var(--text-font);
+    color: var(--text-blue);
     text-align: center;
 }
 #profile span{
-    color: gray;
+    color: var(--main-color);
     font-family: serif;
     font-size: clamp(22px, 2.2vw, 70px);
 }
 
+#products h2{
+    text-align: center !important;
+    font-size: clamp(32px, 3.7vw, 90px);
+}
 
+#products .col {
+    padding: 0 !important;
+    overflow: hidden;
+    
+}
+#products .col img{
+    transition: 0.2s linear;
+    width: 100% !important;
+
+}
+ 
+#products .col:hover > img{
+    transition: 0.2s linear;
+    transform: scale(1.2);
+    top: -10px;
+}
+
+footer{
+    background-color: var(--main-color);
+    padding: 20px 30px !important;
+    font-family: var(--text-font) !important;
+}
+footer #copyright{
+    margin: 0 !important;
+    padding-top: 10px ;
+    text-align: center;
+}
 @media screen and (min-width: 1024px) {
-    #quality, #service, #profile{
+    #quality,#service, #profile, #products, #contact{
         position: relative;
-        top: -150px;
     }
+    #quality{
+        top: -120px;
+    }
+    #service{
+        top: -120px;
+    }
+    #profile{
+        top: -90px;
+    }
+    #products{
+        top: -60px;
+    }
+   
     
   }
