@@ -1,7 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+
 :root{
     --main-color: #f4f4f4;
+    --text-blue : rgb(13, 202, 240);
+    --text-orange : rgb(233, 155, 0);
+
     --bg-primary: #1f1f1f;
+    --bg-secondary: #C3BCC3;
+    --bg-black: black ;
+    --bg-white: white; 
+
+    --heading-font : Merriweather;
     --text-font : Poppins;
 }
 .bg-body-tertiary{
@@ -122,13 +132,52 @@
     color: var(--main-color);
     background-color: var(--bg-primary);
 }
+#profile{
+    background-color: var(--bg-black );
+    margin-top: 50px;
+}
+#profile img{
+    aspect-ratio: 1/1;
+    padding: 20px;
+    background-color: var(--bg-white);
+    border: 2px solid var(--bg-white);
+    border-radius: 50%;
+}
+#profile .col{
+    /* d-flex align-items-center justify-content-center */
+    display: flex !important;
+    justify-content: center;
+    flex-direction: column !important;
+    color: var(--main-color);
+}
+#profile .col1{
+    align-items: center !important;
+    justify-content: center !important;
+}
+#profile h2{
+    font-size: clamp(30px,4vw, 108px);
+    font-family: var(--heading-font);
+    margin-top: 20px;
+}
+#profile h3{
+    font-size: clamp(22px,2.5vw, 72px);
+    color: var(--text-blue) ;
+    font-family: var(--heading-font);
+}
+#profile h4{
+    font-size: clamp(22px,2.5vw, 72px);
+    font-family: var(--heading-font);
+}
+#profile p{
+    font-size: clamp(18px, 1.8vw, 60px);
+    font-family: var(--text-font);
+    color: var(--text-orange);
+}
+
 @media screen and (min-width: 1024px) {
-    #quality{
+    #quality, #service, #profile{
         position: relative;
         top: -150px;
     }
-    #service{
-        position: relative;
-        top: -150px;
-    }
+    
   }
