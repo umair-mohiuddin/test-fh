@@ -13,7 +13,12 @@
 
     --heading-font : Merriweather;
     --text-font : Poppins;
+
+    --h-size: clamp(32px, 3.7vw, 90px);
+    --sub-h-size: clamp(24px, 2.8vw, 60px);
+    --p-size:clamp(18px, 1.4vw, 40px);
 }
+
 .bg-body-tertiary{
     background-color: var(--main-color) !important;
     padding: 0 !important;
@@ -81,19 +86,24 @@
     top: -150px;
 } */
 #quality .col{
-    padding: 20px ;
-    
+    padding: 10px ;
+}
+#quality > h2{
+    text-align: center !important;
+    margin-top: 30px;
+    font-size: var(--h-size) !important;
 }
 #quality .col div{
     background-color: white;
-    box-shadow: 0px 0px 10px var(--bg-primary);
+    box-shadow: 0px 0px 5px var(--bg-primary);
     border-radius: 10px;
-    padding: 20px 20px 10px 20px;
+    padding: 20px 10px 10px 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     text-align: center;
+    width: 100%;
+    height: 100%;
 }
 #quality .col h3{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -103,14 +113,14 @@
     font-family: var(--text-font);
 }
 #service{
-    padding-top: 30px;
-    width: 90% !important;
+    margin-top: 20px !important;
+    width: 100% !important;
+    background-color: var(--bg-black) !important;
 }
 #service .row{
-    border-radius: 20px;
     color: var(--main-color);
     background-color: var(--bg-black);
-    overflow: hidden;
+
 }
 
 #service .row .col h2{
@@ -134,8 +144,10 @@
 }
 #profile{
     background-color: var(--bg-black );
-    margin-top: 50px;
     padding: 20px 0px !important;
+}
+#profile .row{
+    width: 90% !important;
 }
 #profile img{
     aspect-ratio: 1/1;
@@ -175,9 +187,12 @@
     font-family: serif;
     font-size: clamp(22px, 2.2vw, 70px);
 }
-
+#products{
+    background-color: var(--bg-black);
+}
 #products h2{
     text-align: center !important;
+    color: var(--main-color);
     font-size: clamp(32px, 3.7vw, 90px);
 }
 
@@ -200,16 +215,52 @@
 
 footer{
     background-color: var(--main-color);
-    padding: 20px 30px !important;
+    padding: 20px  !important;
     font-family: var(--text-font) !important;
 }
-footer #copyright{
-    margin: 0 !important;
-    padding-top: 10px ;
-    text-align: center;
+/* .social-link a{
+    width: 50px;
+} */
+ .f-link{
+    color: #212529;
+    text-decoration: none;
 }
+ 
+.social-link img{
+    width: 30px;
+    margin: 0px 7px;
+}
+
+#story, #work-with-us{
+    padding: 30px 0px !important;
+    width: 90% !important;
+    margin: auto !important;
+}
+.story-h4{
+    margin-bottom: 0px !important;
+}
+.story-h{
+    font-size: var(--sub-h-size) !important;
+    position: relative;
+}
+.story-h::before{
+    width: 100px;
+    height: 3px;
+    bottom: -15px;
+    content: '';
+    position: absolute;
+    background-color: var(--bg-black);
+}
+.story-p{
+    margin-top: 20px;
+    margin-bottom: 0px;
+    text-align: justify;
+    font-size: clamp(18px, 1.4vw, 40px);
+}
+
+
 @media screen and (min-width: 1024px) {
-    #quality,#service, #profile, #products, #contact{
+    /* #quality,#service, #profile, #products, #contact{
         position: relative;
     }
     #quality{
@@ -223,7 +274,7 @@ footer #copyright{
     }
     #products{
         top: -60px;
-    }
+    } */
    
     
   }
